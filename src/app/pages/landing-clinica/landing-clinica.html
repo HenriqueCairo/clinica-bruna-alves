@@ -1,0 +1,199 @@
+<header class="header">
+  <div class="container header-content">
+    <a href="#inicio" class="brand" (click)="fecharMenu()">
+      <img src="assets/images/logo.png" alt="Logo Dra. Bruna Alves">
+
+      <div class="brand-text">
+        <strong>Dra. Bruna Alves</strong>
+        <span>Odontologia Integrada</span>
+      </div>
+    </a>
+
+    <nav class="nav">
+      <a href="#tratamentos">Serviços</a>
+      <a href="#diferenciais">Tratamentos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <button class="btn btn-small desktop-cta" (click)="abrirWhatsApp()">
+      Agendar Avaliação
+    </button>
+
+    <button class="menu-btn" type="button" (click)="toggleMenu()" aria-label="Abrir menu">
+      {{ menuAberto ? '×' : '☰' }}
+    </button>
+  </div>
+
+  <nav class="mobile-menu" [class.active]="menuAberto">
+    <a href="#tratamentos" (click)="fecharMenu()">Serviços</a>
+    <a href="#diferenciais" (click)="fecharMenu()">Tratamentos</a>
+    <a href="#contato" (click)="fecharMenu()">Contato</a>
+
+    <button class="btn mobile-cta" (click)="abrirWhatsApp(); fecharMenu()">
+      Agendar Avaliação
+    </button>
+  </nav>
+</header>
+
+<main>
+  <section id="inicio" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>
+          O equilíbrio perfeito entre saúde e a estética do seu sorriso.
+        </h1>
+
+        <p>
+          Atendimento humanizado e odontologia integrada com a Dra. Bruna Alves.
+          Transformando vidas através de sorrisos saudáveis.
+        </p>
+      </div>
+
+      <div class="hero-image">
+        <img src="assets/images/principal.png" alt="Dra. Bruna Alves">
+      </div>
+    </div>
+  </section>
+
+  <section id="tratamentos" class="section treatments">
+    <div class="container">
+      <div class="section-header">
+        <span>Nossos tratamentos</span>
+        <h2>Excelência em cada detalhe</h2>
+      </div>
+
+      <div class="treatment-grid">
+        <article class="treatment-card">
+          <img src="assets/images/Broken_heart_light.png" alt="">
+          <h3>Reabilitação Oral</h3>
+          <p>
+            Recuperação da função mastigatória, estética e saúde bucal.
+          </p>
+        </article>
+
+        <article class="treatment-card">
+          <img src="assets/images/stars.png" alt="">
+          <h3>Estética Dental</h3>
+          <p>
+            Clareamento, facetas e procedimentos para valorizar seu sorriso.
+          </p>
+        </article>
+
+        <article class="treatment-card">
+          <img src="assets/images/icone-dente.png" alt="">
+          <h3>Ortodontia</h3>
+          <p>
+            Alinhamento dentário com planejamento seguro e individualizado.
+          </p>
+        </article>
+
+        <article class="treatment-card">
+          <img src="assets/images/icone-protecao.png" alt="">
+          <h3>Prevenção</h3>
+          <p>
+            Cuidados regulares para manter sua saúde bucal em dia.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="diferenciais" class="section differentials">
+    <div class="container differentials-grid">
+      <div class="differentials-image">
+        <img src="assets/images/secundaria.png" alt="Sorriso em tratamento odontológico">
+      </div>
+
+      <div class="differentials-text">
+        <span>Por que nos escolher?</span>
+
+        <h2>
+          Diferenciais que fazem a diferença no seu tratamento
+        </h2>
+
+        <div class="feature">
+          <h3>Tecnologia de Ponta</h3>
+          <p>
+            Equipamentos modernos para diagnósticos precisos e tratamentos mais seguros.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Ambiente Acolhedor</h3>
+          <p>
+            Espaço confortável para proporcionar uma experiência tranquila.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Planejamento Personalizado</h3>
+          <p>
+            Cada sorriso é único. Criamos planos de tratamento específicos para cada paciente.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container cta-content">
+      <h2>Pronto para conquistar o sorriso dos seus sonhos?</h2>
+
+      <p>
+        Agende agora sua avaliação e descubra como podemos transformar seu sorriso
+        com cuidado, segurança e excelência.
+      </p>
+
+      <button class="btn btn-light" (click)="abrirWhatsApp()">
+        Quero agendar a minha avaliação
+      </button>
+    </div>
+  </section>
+
+  <section id="contato" class="footer-info">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/images/logo.png" alt="Logo Dra. Bruna Alves">
+
+        <p>
+          Odontologia integrada com foco em saúde, estética e atendimento humanizado.
+        </p>
+
+        <div class="social-icons">
+          <button (click)="abrirWhatsApp()" aria-label="WhatsApp">
+            <img src="assets/images/whats.svg" alt="WhatsApp">
+          </button>
+
+          <a href="#" aria-label="Instagram">
+            <img src="assets/images/instagram (3).svg" alt="Instagram">
+          </a>
+        </div>
+
+         <p>© 2026 Dra. Bruna Alves - Odontologia Integrada. Todos os direitos reservados.</p>
+
+        <span>Desenvolvido com excelência para sorrisos premium.</span>
+      </div>
+
+
+      <div class="contact-box">
+        <h3>Contato</h3>
+
+        <p><strong>Endereço:</strong> Rua Carambola Natal, 76 - Vila Natal, 
+          São Paulo - SP, 04863-160
+        </p>
+        <p><strong>São Paulo - SP</strong></p>
+        <p><strong>Telefone:</strong>(11) 98657-9246</p>
+        <p><strong>Atendimento:</strong> Seg - Sáb: 10h às 18h </p>
+      </div>
+
+      <div class="location-box">
+        <h3>Localização</h3>
+        <img src="assets/images/localizacao.png" alt="Mapa da localização">
+      </div>
+    </div>
+  </section>
+</main>
+
+<button class="floating-whatsapp" (click)="abrirWhatsApp()" aria-label="Chamar no WhatsApp">
+  <img src="assets/images/whats.svg" alt="WhatsApp">
+</button>
