@@ -659,3 +659,51 @@ a {
     text-align: center;
   }
 }
+
+/* ========================================
+   AJUSTES EXCLUSIVOS MOBILE
+   ======================================== */
+
+@media (max-width: 768px) {
+
+  /* 1. CENTRALIZAR IMAGEM DO SORRISO */
+
+  .differentials-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .differentials-image img {
+    display: block;
+    width: 100%;
+    max-width: 330px;
+    height: 330px;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+  }
+
+  /* 2. REMOVER BORDAS DOS ÍCONES */
+
+  .social-icons a,
+  .social-icons button,
+  .footer-social a,
+  .footer-social button {
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  /* 3. AJUSTAR TAMANHO DOS ÍCONES */
+
+  .social-icons img,
+  .footer-social img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+}
